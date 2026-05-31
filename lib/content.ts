@@ -39,7 +39,22 @@ export const hero = {
 
 export const trustStrip = {
   label: "Construimos con",
-  items: ["Vercel", "Next.js", "Supabase", "Anthropic", "OpenAI", "AI SDK", "Postgres", "Redis"],
+  brands: [
+    { slug: "openai", name: "OpenAI" },
+    { slug: "anthropic", name: "Anthropic" },
+    { slug: "google", name: "Google" },
+    { slug: "meta", name: "Meta" },
+    { slug: "vercel", name: "Vercel" },
+    { slug: "nextdotjs", name: "Next.js" },
+    { slug: "supabase", name: "Supabase" },
+    { slug: "tailwindcss", name: "Tailwind" },
+    { slug: "react", name: "React" },
+    { slug: "typescript", name: "TypeScript" },
+    { slug: "postgresql", name: "Postgres" },
+    { slug: "redis", name: "Redis" },
+    { slug: "cloudflare", name: "Cloudflare" },
+    { slug: "huggingface", name: "Hugging Face" },
+  ],
 };
 
 export const servicios = {
@@ -126,20 +141,52 @@ export const stack = {
     "O te ayudamos a elegir la siguiente. Sin lock-in, sin vendor magic. Modelos, plataformas y herramientas se eligen por mérito técnico.",
   categories: [
     {
-      label: "Frameworks",
-      items: ["Next.js 16", "React Server Components", "AI SDK v6", "Hono"],
+      label: "Modelos",
+      caption: "Los LLMs más capaces, ruteados sin lock-in.",
+      items: [
+        { slug: "openai", name: "OpenAI" },
+        { slug: "anthropic", name: "Anthropic" },
+        { slug: "google", name: "Google" },
+        { slug: "meta", name: "Meta" },
+        { slug: "mistralai", name: "Mistral" },
+        { slug: "huggingface", name: "Hugging Face" },
+      ],
     },
     {
-      label: "Modelos",
-      items: ["Claude", "GPT", "Gemini", "Llama", "Kimi", "DeepSeek"],
+      label: "Frameworks",
+      caption: "Stack moderno para web, APIs y agentes.",
+      items: [
+        { slug: "nextdotjs", name: "Next.js" },
+        { slug: "react", name: "React" },
+        { slug: "typescript", name: "TypeScript" },
+        { slug: "tailwindcss", name: "Tailwind" },
+        { slug: "hono", name: "Hono" },
+        { slug: "drizzle", name: "Drizzle" },
+      ],
     },
     {
       label: "Plataforma",
-      items: ["Vercel", "Supabase", "AWS", "Cloudflare"],
+      caption: "Donde corre y se entrega tu aplicación.",
+      items: [
+        { slug: "vercel", name: "Vercel" },
+        { slug: "supabase", name: "Supabase" },
+        { slug: "aws", name: "AWS" },
+        { slug: "cloudflare", name: "Cloudflare" },
+        { slug: "github", name: "GitHub" },
+        { slug: "docker", name: "Docker" },
+      ],
     },
     {
       label: "Datos",
-      items: ["Postgres", "pgvector", "Redis", "Blob storage"],
+      caption: "Persistencia, caché y memoria de agentes.",
+      items: [
+        { slug: "postgresql", name: "Postgres" },
+        { slug: "redis", name: "Redis" },
+        { slug: "qdrant", name: "Qdrant" },
+        { slug: "mongodb", name: "MongoDB" },
+        { slug: "neon", name: "Neon" },
+        { slug: "upstash", name: "Upstash" },
+      ],
     },
   ],
 };
