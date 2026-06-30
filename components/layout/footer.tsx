@@ -16,7 +16,7 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-x-12 gap-y-8 md:grid-cols-3">
             <div>
               <h3 className="text-xs font-medium text-subtle uppercase tracking-wider mb-4">
-                Sitio
+                Portafolio
               </h3>
               <ul className="flex flex-col gap-2.5">
                 {footer.links.map((link) => (
@@ -39,9 +39,7 @@ export function Footer() {
               <ul className="flex flex-col gap-2.5">
                 <li>
                   <a
-                    href={whatsappUrl(
-                      "Hola Prometheus, vengo del footer del sitio. Quiero conversar.",
-                    )}
+                    href={whatsappUrl("Hola Cristian, vengo del footer de tu portafolio. Quiero conversar.")}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -51,12 +49,10 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href={site.contact.calendarUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={`mailto:${site.contact.email}`}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    Agendar llamada
+                    {site.contact.email}
                   </a>
                 </li>
               </ul>
@@ -97,7 +93,7 @@ export function Footer() {
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-subtle">{footer.copyright}</p>
           <p className="text-xs text-subtle font-mono tracking-wider">
-            v1.0 · {site.contact.location.toUpperCase()}
+            v2.0 · {site.contact.location.toUpperCase()}
           </p>
         </div>
       </Container>

@@ -9,8 +9,6 @@ import { Button } from "@/components/ui/button";
 import { ctaFinal, whatsappUrl } from "@/lib/content";
 
 export function CtaFinal() {
-  const waMessage = "Hola Prometheus, quiero conversar sobre agentes IA para mi empresa.";
-
   return (
     <section
       id="contacto"
@@ -36,7 +34,7 @@ export function CtaFinal() {
             <h2
               id="cta-final-title"
               className="text-balance font-semibold tracking-tighter text-foreground leading-[0.95]"
-              style={{ fontSize: "clamp(2.5rem, 6vw + 0.5rem, 5.5rem)" }}
+              style={{ fontSize: "clamp(2.25rem, 5.5vw + 0.5rem, 5rem)" }}
             >
               {ctaFinal.title}
             </h2>
@@ -47,7 +45,7 @@ export function CtaFinal() {
 
             <div className="mt-2 flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
               <Button asChild size="lg" className="w-full sm:w-auto">
-                <a href={whatsappUrl(waMessage)} target="_blank" rel="noopener noreferrer">
+                <a href={whatsappUrl(ctaFinal.waMessage)} target="_blank" rel="noopener noreferrer">
                   <WhatsAppIcon className="h-4 w-4" />
                   Escribir por WhatsApp
                   <ArrowRight />
@@ -58,12 +56,12 @@ export function CtaFinal() {
             <div className="mt-6 flex w-full max-w-xl items-center gap-3">
               <span aria-hidden className="h-px flex-1 bg-border" />
               <span className="text-xs font-mono uppercase tracking-[0.18em] text-subtle">
-                o déjanos tu contacto
+                o déjame tu contacto
               </span>
               <span aria-hidden className="h-px flex-1 bg-border" />
             </div>
 
-            <LeadForm source="Prometheus Labs · Home" className="w-full max-w-xl text-left" />
+            <LeadForm source="Cristian Holguin · Portafolio" className="w-full max-w-xl text-left" />
           </div>
         </Reveal>
       </Container>
