@@ -154,7 +154,7 @@ export function Hero() {
               </div>
 
               <Image
-                src="/cristian-holguin.jpg"
+                src="/cristian-holguin.png"
                 alt="Cristian Holguin — Consultor de Tecnología, Growth e IA"
                 fill
                 className="object-cover object-center"

@@ -51,7 +51,7 @@ export const hero = {
   ],
   primaryCta: { label: "Ver Casos de Éxito", href: "#casos" },
   secondaryCta: { label: "Hablemos de tu proyecto", href: "#contacto" },
-  photo: "/cristian-holguin.jpg",
+  photo: "/cristian-holguin.png",
 };
 
 export const trustStrip = {
