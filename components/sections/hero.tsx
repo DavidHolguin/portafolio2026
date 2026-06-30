@@ -48,14 +48,7 @@ export function Hero() {
             variants={heroContainer}
             className="flex flex-col items-center text-center lg:items-start lg:text-left"
           >
-            <motion.div variants={heroLine} className="mb-8 inline-flex items-center gap-2.5">
-              <span
-                aria-hidden
-                className="h-1.5 w-1.5 rounded-full bg-ember shadow-[0_0_16px_3px_rgba(26,115,232,0.7)]"
-              />
-             
-            </motion.div>
-
+            
             <h1
               id="hero-title"
               className="text-balance font-semibold tracking-tighter leading-[0.95] text-foreground"
