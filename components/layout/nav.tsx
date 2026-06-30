@@ -1,10 +1,10 @@
 "use client";
 
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { nav } from "@/lib/content";
+import { nav, whatsappUrl } from "@/lib/content";
 import { cn } from "@/lib/utils";
 import { Container } from "./container";
 import { Logo } from "./logo";
@@ -47,7 +47,13 @@ export function Nav() {
 
         <div className="hidden md:block">
           <Button asChild size="sm">
-            <a href={nav.cta.href}>{nav.cta.label}</a>
+            <a
+              href={whatsappUrl("Hola Cristian, vengo de tu portafolio y quiero conversar.")}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {nav.cta.label}
+            </a>
           </Button>
         </div>
 
@@ -58,7 +64,7 @@ export function Nav() {
               className="md:hidden flex items-center justify-center h-10 w-10 rounded-full text-foreground hover:bg-accent transition-colors"
               aria-label="Abrir menú"
             >
-              <Menu className="h-5 w-5" />
+              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
           </SheetTrigger>
           <SheetContent side="top" className="p-8 pt-24 border-x-0 rounded-b-3xl">
@@ -79,7 +85,12 @@ export function Nav() {
             </ul>
             <div className="mt-8">
               <Button size="lg" className="w-full" asChild>
-                <a href={nav.cta.href} onClick={() => setOpen(false)}>
+                <a
+                  href={whatsappUrl("Hola Cristian, vengo de tu portafolio y quiero conversar.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                >
                   {nav.cta.label}
                 </a>
               </Button>

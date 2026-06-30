@@ -5,9 +5,20 @@ import { BrandLogo } from "@/components/primitives/brand-logo";
 import { SectionHeading } from "@/components/primitives/section-heading";
 import { stack } from "@/lib/content";
 
+// Slugs that don't have Simple Icons — render as text only
+const textOnlyBrands = new Set([
+  "anthropic",
+  "n8n",
+  "googlesearchconsole",
+  "googletag",
+  "looker",
+  "airtable",
+]);
+
 export function Stack() {
   return (
     <section
+      id="stack"
       className="relative border-t border-border bg-card/30 py-24 sm:py-32 lg:py-40"
       aria-labelledby="stack-title"
     >
@@ -61,9 +72,11 @@ export function Stack() {
                     key={item.slug}
                     className="group/chip flex items-center gap-2 rounded-full border border-border bg-background/60 px-3.5 py-2 transition-all duration-300 hover:border-ember/50 hover:bg-background hover:shadow-[0_0_24px_-8px_rgba(26,115,232,0.4)]"
                   >
-                    <span className="grayscale opacity-60 transition-all duration-300 group-hover/chip:grayscale-0 group-hover/chip:opacity-100">
-                      <BrandLogo slug={item.slug} name={item.name} size={16} color="A1A1AA" />
-                    </span>
+                    {textOnlyBrands.has(item.slug) ? null : (
+                      <span className="grayscale opacity-60 transition-all duration-300 group-hover/chip:grayscale-0 group-hover/chip:opacity-100">
+                        <BrandLogo slug={item.slug} name={item.name} size={16} color="A1A1AA" />
+                      </span>
+                    )}
                     <span className="text-sm font-medium text-foreground/85 group-hover/chip:text-foreground transition-colors">
                       {item.name}
                     </span>

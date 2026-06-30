@@ -1,17 +1,13 @@
-import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
   size?: "sm" | "md";
-  withWordmark?: boolean;
   href?: string;
   className?: string;
 }
 
-export function Logo({ size = "sm", withWordmark = true, href = "/", className }: LogoProps) {
-  const dim = size === "sm" ? 24 : 32;
-
+export function Logo({ size = "sm", href = "/", className }: LogoProps) {
   const content = (
     <span
       className={cn(
@@ -20,31 +16,36 @@ export function Logo({ size = "sm", withWordmark = true, href = "/", className }
         className,
       )}
     >
-      <Image
-        src="/logo-prometheus.png"
-        alt="Prometheus Labs"
-        width={dim}
-        height={dim}
-        priority
-        style={{ height: dim, width: "auto" }}
-      />
-      {withWordmark && (
+      {/* Monogram CH */}
+      <span
+        className={cn(
+          "relative flex items-center justify-center rounded-lg bg-ember/10 border border-ember/20 font-mono font-bold tracking-tight text-ember shrink-0",
+          "shadow-[0_0_20px_-4px_rgba(26,115,232,0.5)]",
+          size === "sm" ? "h-7 w-7 text-xs" : "h-9 w-9 text-sm",
+        )}
+      >
+        CH
         <span
-          className={cn(
-            "font-semibold tracking-tight text-foreground",
-            size === "sm" ? "text-sm" : "text-base",
-          )}
-        >
-          Prometheus
-          <span className="text-muted-foreground"> Labs</span>
-        </span>
-      )}
+          aria-hidden
+          className="absolute inset-0 rounded-lg bg-gradient-to-br from-ember/20 to-transparent"
+        />
+      </span>
+
+      <span
+        className={cn(
+          "font-semibold tracking-tight text-foreground",
+          size === "sm" ? "text-sm" : "text-base",
+        )}
+      >
+        Cristian
+        <span className="text-muted-foreground"> Holguin</span>
+      </span>
     </span>
   );
 
   if (href) {
     return (
-      <Link href={href} aria-label="Prometheus Labs — inicio">
+      <Link href={href} aria-label="Cristian Holguin — portafolio">
         {content}
       </Link>
     );

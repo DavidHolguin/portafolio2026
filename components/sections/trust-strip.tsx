@@ -3,8 +3,11 @@ import { BrandLogo } from "@/components/primitives/brand-logo";
 import { trustStrip } from "@/lib/content";
 
 export function TrustStrip() {
-  // Duplicate the list so the marquee loop is seamless when translating -50%
+  // Duplicate for seamless marquee
   const items = [...trustStrip.brands, ...trustStrip.brands];
+
+  // Brands without a Simple Icons slug — render as text
+  const textOnlyBrands = new Set(["rappi", "icbf", "pari", "anthropic", "googlesearchconsole", "googletag", "looker"]);
 
   return (
     <section
@@ -31,12 +34,19 @@ export function TrustStrip() {
             <ul className="flex w-max items-center gap-10 animate-marquee group-hover:[animation-play-state:paused]">
               {items.map((brand, idx) => (
                 <li
-                  // First half uses brand slug, second half disambiguates with `dup-`
                   key={idx < trustStrip.brands.length ? brand.slug : `dup-${brand.slug}`}
                   className="flex items-center gap-2.5 shrink-0 grayscale opacity-55 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
                 >
-                  <BrandLogo slug={brand.slug} name={brand.name} size={22} color="A1A1AA" />
-                  <span className="text-sm font-medium text-muted-foreground">{brand.name}</span>
+                  {textOnlyBrands.has(brand.slug) ? (
+                    <span className="text-sm font-semibold tracking-tight text-muted-foreground">
+                      {brand.name}
+                    </span>
+                  ) : (
+                    <>
+                      <BrandLogo slug={brand.slug} name={brand.name} size={22} color="A1A1AA" />
+                      <span className="text-sm font-medium text-muted-foreground">{brand.name}</span>
+                    </>
+                  )}
                 </li>
               ))}
             </ul>

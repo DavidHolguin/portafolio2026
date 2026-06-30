@@ -2,6 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
+import Image from "next/image";
 import { Container } from "@/components/layout/container";
 import { EmberGlow } from "@/components/primitives/ember-glow";
 import { EmberParticles } from "@/components/primitives/ember-particles";
@@ -25,7 +26,7 @@ export function Hero() {
 
       <GrainOverlay />
 
-      {/* Subtle grid lines suggesting structure */}
+      {/* Grid lines */}
       <div
         aria-hidden
         className="absolute inset-0 -z-10 opacity-[0.04]"
@@ -38,70 +39,183 @@ export function Hero() {
       />
 
       <Container className="relative">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={heroContainer}
-          className="flex flex-col items-center text-center"
-        >
-          <motion.div variants={heroLine} className="mb-8 inline-flex items-center gap-2.5">
-            <span
-              aria-hidden
-              className="h-1.5 w-1.5 rounded-full bg-ember shadow-[0_0_16px_3px_rgba(26,115,232,0.7)]"
-            />
-            <span className="text-xs font-mono uppercase tracking-[0.22em] text-muted-foreground">
-              {hero.eyebrow}
-            </span>
-          </motion.div>
+        <div className="grid gap-16 lg:grid-cols-2 lg:gap-24 items-center">
 
-          <h1
-            id="hero-title"
-            className="text-balance font-semibold tracking-tighter leading-[0.95] text-foreground"
-            style={{ fontSize: "clamp(2.75rem, 7.5vw + 0.5rem, 6.5rem)" }}
-          >
-            {hero.headline.map((line, idx) => (
-              <motion.span key={line} variants={heroLine} className="block">
-                {idx === hero.headline.length - 1 ? (
-                  <>
-                    {line.split(" ").slice(0, -1).join(" ")}{" "}
-                    <span className="relative">
-                      <span className="bg-clip-text text-transparent bg-gradient-to-r from-ember-bright via-ember to-ember-dim">
-                        {line.split(" ").slice(-1)}
-                      </span>
-                    </span>
-                  </>
-                ) : (
-                  line
-                )}
-              </motion.span>
-            ))}
-          </h1>
-
-          <motion.p
-            variants={heroLine}
-            className="mt-8 max-w-2xl text-pretty text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed"
-          >
-            {hero.description}
-          </motion.p>
-
+          {/* Left — Text content */}
           <motion.div
-            variants={heroLine}
-            className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-3"
+            initial="hidden"
+            animate="visible"
+            variants={heroContainer}
+            className="flex flex-col items-start text-left"
           >
-            <Button asChild size="lg" className="w-full sm:w-auto">
-              <a href={hero.primaryCta.href}>
-                {hero.primaryCta.label}
-                <ArrowRight className="ml-1" />
-              </a>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-              <a href={hero.secondaryCta.href}>{hero.secondaryCta.label}</a>
-            </Button>
+            <motion.div variants={heroLine} className="mb-8 inline-flex items-center gap-2.5">
+              <span
+                aria-hidden
+                className="h-1.5 w-1.5 rounded-full bg-ember shadow-[0_0_16px_3px_rgba(26,115,232,0.7)]"
+              />
+              <span className="text-xs font-mono uppercase tracking-[0.22em] text-muted-foreground">
+                {hero.eyebrow}
+              </span>
+            </motion.div>
+
+            <h1
+              id="hero-title"
+              className="text-balance font-semibold tracking-tighter leading-[0.95] text-foreground"
+              style={{ fontSize: "clamp(2.5rem, 6vw + 0.5rem, 5.5rem)" }}
+            >
+              {hero.headline.map((line, idx) => (
+                <motion.span key={line} variants={heroLine} className="block">
+                  {idx === hero.headline.length - 1 ? (
+                    <>
+                      {line.split(" ").slice(0, -1).join(" ")}{" "}
+                      <span className="relative">
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-ember-bright via-ember to-ember-dim">
+                          {line.split(" ").slice(-1)}
+                        </span>
+                      </span>
+                    </>
+                  ) : (
+                    line
+                  )}
+                </motion.span>
+              ))}
+            </h1>
+
+            <motion.p
+              variants={heroLine}
+              className="mt-8 max-w-xl text-pretty text-base sm:text-lg text-muted-foreground leading-relaxed"
+            >
+              {hero.description}
+            </motion.p>
+
+            {/* Stats */}
+            <motion.div
+              variants={heroLine}
+              className="mt-10 flex items-center gap-8 border-t border-border pt-8"
+            >
+              {hero.stats.map((stat) => (
+                <div key={stat.label} className="flex flex-col gap-0.5">
+                  <span className="text-2xl font-bold tracking-tight text-foreground">
+                    {stat.value}
+                  </span>
+                  <span className="text-xs text-muted-foreground leading-tight max-w-[80px]">
+                    {stat.label}
+                  </span>
+                </div>
+              ))}
+            </motion.div>
+
+            <motion.div
+              variants={heroLine}
+              className="mt-10 flex flex-col sm:flex-row items-start gap-3"
+            >
+              <Button asChild size="lg" className="w-full sm:w-auto">
+                <a href={hero.primaryCta.href}>
+                  {hero.primaryCta.label}
+                  <ArrowRight className="ml-1" />
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+                <a href={hero.secondaryCta.href}>{hero.secondaryCta.label}</a>
+              </Button>
+            </motion.div>
           </motion.div>
-        </motion.div>
+
+          {/* Right — Photo card */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96, y: 24 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="relative hidden lg:flex items-center justify-center"
+          >
+            {/* Outer glow */}
+            <div
+              aria-hidden
+              className="absolute inset-0 rounded-3xl opacity-40"
+              style={{
+                background:
+                  "radial-gradient(ellipse 70% 70% at 50% 50%, rgba(26,115,232,0.25) 0%, transparent 70%)",
+                filter: "blur(32px)",
+              }}
+            />
+
+            {/* Photo card */}
+            <div className="relative w-full max-w-sm aspect-[3/4] rounded-3xl border border-border-strong overflow-hidden bg-card shadow-2xl">
+              {/* Glassmorphism top bar */}
+              <div className="absolute top-0 inset-x-0 z-10 flex items-center gap-2 px-4 py-3 bg-background/40 backdrop-blur-xl border-b border-white/5">
+                <div className="flex gap-1.5">
+                  <span className="h-2.5 w-2.5 rounded-full bg-ember/70" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-ember/30" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-border-strong" />
+                </div>
+                <span className="ml-auto font-mono text-[10px] text-subtle tracking-widest uppercase">
+                  Cristian Holguin · 2026
+                </span>
+              </div>
+
+              <Image
+                src="/cristian-holguin.jpg"
+                alt="Cristian Holguin — Consultor de Tecnología, Growth e IA"
+                fill
+                className="object-cover object-center"
+                priority
+              />
+
+              {/* Bottom overlay card */}
+              <div className="absolute bottom-0 inset-x-0 z-10 p-4 bg-background/60 backdrop-blur-xl border-t border-white/5">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">Cristian Holguin</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">
+                      Ingeniería · Growth · IA · GEO
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <span
+                      aria-hidden
+                      className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_8px_2px_rgba(52,211,153,0.6)]"
+                    />
+                    <span className="text-xs text-emerald-400 font-mono">Disponible</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Floating badge — GEO */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.0, duration: 0.6, ease }}
+              className="absolute -right-6 top-1/3 z-20"
+            >
+              <div className="flex items-center gap-2 rounded-xl border border-ember/30 bg-card/80 backdrop-blur-xl px-3.5 py-2.5 shadow-lg">
+                <span
+                  aria-hidden
+                  className="h-1.5 w-1.5 rounded-full bg-ember shadow-[0_0_8px_2px_rgba(26,115,232,0.8)]"
+                />
+                <span className="text-xs font-mono text-ember uppercase tracking-wider">
+                  GEO Pioneer
+                </span>
+              </div>
+            </motion.div>
+
+            {/* Floating badge — 12 años */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.2, duration: 0.6, ease }}
+              className="absolute -left-6 bottom-1/3 z-20"
+            >
+              <div className="flex items-center gap-2 rounded-xl border border-border-strong bg-card/80 backdrop-blur-xl px-3.5 py-2.5 shadow-lg">
+                <span className="text-sm font-bold text-foreground">12+</span>
+                <span className="text-xs text-muted-foreground">años</span>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
       </Container>
 
-      {/* Decorative scroll indicator, anchored to section bottom */}
+      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
