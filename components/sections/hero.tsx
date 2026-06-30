@@ -53,9 +53,7 @@ export function Hero() {
                 aria-hidden
                 className="h-1.5 w-1.5 rounded-full bg-ember shadow-[0_0_16px_3px_rgba(26,115,232,0.7)]"
               />
-              <span className="text-xs font-mono uppercase tracking-[0.22em] text-muted-foreground">
-                {hero.eyebrow}
-              </span>
+             
             </motion.div>
 
             <h1

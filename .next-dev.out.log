@@ -1,0 +1,15 @@
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.20.5:3000
+✓ Ready in 4.3s
+
+ GET / 200 in 3.5s (next.js: 914ms, application-code: 2.6s)
+ GET / 200 in 5.0s (next.js: 161ms, application-code: 4.8s)
+ GET /icon?794965a93af24807 200 in 3.2s (next.js: 464ms, application-code: 2.7s)
+ GET / 200 in 9.3s (next.js: 625ms, application-code: 8.7s)
+ GET /icon?794965a93af24807 200 in 340ms (next.js: 17ms, application-code: 323ms)
+ GET / 200 in 110s (next.js: 5.7s, application-code: 105s)
+ GET / 200 in 60s (next.js: 7.1s, application-code: 53s)
+ GET /icon?794965a93af24807 200 in 2.2s (next.js: 54ms, application-code: 2.2s)
+ GET /icon?794965a93af24807 200 in 2.7s (next.js: 11ms, application-code: 2.7s)
+✓ Finished writing to filesystem cache in 10.8s

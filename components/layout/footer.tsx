@@ -47,14 +47,7 @@ export function Footer() {
                     WhatsApp {site.contact.whatsappDisplay}
                   </a>
                 </li>
-                <li>
-                  <a
-                    href={`mailto:${site.contact.email}`}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {site.contact.email}
-                  </a>
-                </li>
+               
               </ul>
             </div>
 
