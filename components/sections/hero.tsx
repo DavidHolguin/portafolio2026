@@ -46,7 +46,7 @@ export function Hero() {
             initial="hidden"
             animate="visible"
             variants={heroContainer}
-            className="flex flex-col items-start text-left"
+            className="flex flex-col items-center text-center lg:items-start lg:text-left"
           >
             <motion.div variants={heroLine} className="mb-8 inline-flex items-center gap-2.5">
               <span
@@ -91,10 +91,10 @@ export function Hero() {
             {/* Stats */}
             <motion.div
               variants={heroLine}
-              className="mt-10 flex items-center gap-8 border-t border-border pt-8"
+              className="mt-10 flex items-center justify-center lg:justify-start gap-8 border-t border-border pt-8 w-full max-w-xl"
             >
               {hero.stats.map((stat) => (
-                <div key={stat.label} className="flex flex-col gap-0.5">
+                <div key={stat.label} className="flex flex-col gap-0.5 items-center lg:items-start text-center lg:text-left">
                   <span className="text-2xl font-bold tracking-tight text-foreground">
                     {stat.value}
                   </span>
@@ -107,7 +107,7 @@ export function Hero() {
 
             <motion.div
               variants={heroLine}
-              className="mt-10 flex flex-col sm:flex-row items-start gap-3"
+              className="mt-10 flex flex-col sm:flex-row items-center lg:items-start gap-3 w-full sm:w-auto"
             >
               <Button asChild size="lg" className="w-full sm:w-auto">
                 <a href={hero.primaryCta.href}>
@@ -126,7 +126,7 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.96, y: 24 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="relative hidden lg:flex items-center justify-center"
+            className="relative flex items-center justify-center mt-12 lg:mt-0 w-full"
           >
             {/* Outer glow */}
             <div

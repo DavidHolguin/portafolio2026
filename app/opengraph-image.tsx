@@ -44,11 +44,11 @@ export default async function OG() {
             fontSize: 22,
           }}
         >
-          P
+          CH
         </div>
         <div style={{ display: "flex", gap: 6 }}>
-          <span style={{ fontWeight: 700 }}>Prometheus</span>
-          <span style={{ color: "#A1A1AA" }}>Labs</span>
+          <span style={{ fontWeight: 700 }}>Cristian</span>
+          <span style={{ color: "#A1A1AA" }}>Holguin</span>
         </div>
       </div>
 
@@ -72,22 +72,22 @@ export default async function OG() {
               background: "#1A73E8",
             }}
           />
-          Agencia de IA empresarial
+          Consultor Senior · Tech · Growth · IA
         </div>
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             color: "#FAFAFA",
-            fontSize: 88,
+            fontSize: 72,
             fontWeight: 600,
             letterSpacing: -2.5,
-            lineHeight: 1,
+            lineHeight: 1.1,
           }}
         >
-          <span>Traemos el fuego</span>
+          <span>Conecto código, datos</span>
           <span style={{ display: "flex", gap: 16 }}>
-            de la IA a tu <span style={{ color: "#1A73E8" }}>operación.</span>
+            y growth para <span style={{ color: "#1A73E8" }}>resultados.</span>
           </span>
         </div>
         <div
@@ -98,8 +98,7 @@ export default async function OG() {
             maxWidth: 880,
           }}
         >
-          Agentes a medida e integraciones empresariales para equipos que ya saben que la próxima
-          ventaja competitiva no espera a nadie.
+          {site.description}
         </div>
       </div>
     </div>,
