@@ -18,7 +18,7 @@ export function CtaFinal() {
       <EmberGlow intensity="strong" position="center" className="-z-10" />
       <GrainOverlay />
 
-      <Container className="relative py-28 sm:py-32 lg:py-40">
+      <Container className="relative py-20 sm:py-24 lg:py-32">
         <Reveal>
           <div className="flex flex-col items-center gap-8 text-center">
             <div className="inline-flex items-center gap-2.5">
@@ -61,10 +61,18 @@ export function CtaFinal() {
               <span aria-hidden className="h-px flex-1 bg-border" />
             </div>
 
-            <LeadForm
-              source="Cristian Holguin · Portafolio"
-              className="w-full max-w-xl text-left"
-            />
+            <div className="relative mt-4 w-full max-w-xl">
+              {/* La luz que levanta el bloque del formulario: sobre negro puro se veía apagado */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -inset-x-16 -inset-y-10 -z-10 rounded-[40px]"
+                style={{
+                  background:
+                    "radial-gradient(ellipse at center, rgba(26,115,232,0.16), rgba(26,115,232,0.04) 45%, transparent 72%)",
+                }}
+              />
+              <LeadForm source="Cristian Holguin · Portafolio" className="w-full text-left" />
+            </div>
           </div>
         </Reveal>
       </Container>

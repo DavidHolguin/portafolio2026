@@ -73,13 +73,20 @@ export const trustStrip = {
       plate: false,
       wordmark: false,
     },
-    { slug: "icbf", name: "ICBF", src: "/logos/icbf.svg", height: 30, plate: true, wordmark: true },
+    {
+      slug: "icbf",
+      name: "ICBF",
+      src: "/logos/icbf.svg",
+      height: 34,
+      plate: false,
+      wordmark: true,
+    },
     {
       slug: "eam",
       name: "Institución Universitaria EAM",
       src: "/logos/eam.svg",
-      height: 30,
-      plate: true,
+      height: 26,
+      plate: false,
       wordmark: true,
     },
     {
@@ -90,7 +97,14 @@ export const trustStrip = {
       plate: false,
       wordmark: true,
     },
-    { slug: "pari", name: "Pari", src: null, height: 22, plate: false, wordmark: false },
+    {
+      slug: "pari",
+      name: "Pari",
+      src: "/logos/pari.png",
+      height: 22,
+      plate: false,
+      wordmark: true,
+    },
   ],
 };
 
@@ -204,7 +218,7 @@ export const casos = {
     {
       slug: "icbf",
       client: "ICBF",
-      logo: { src: "/logos/icbf.svg", height: 34, plate: true, alt: "ICBF" },
+      logo: { src: "/logos/icbf.svg", height: 36, plate: false, alt: "ICBF" },
       sector: "Gobierno · Impacto social",
       location: "Colombia",
       year: null,
@@ -227,7 +241,7 @@ export const casos = {
     {
       slug: "pari",
       client: "Pari",
-      logo: null,
+      logo: { src: "/logos/pari.png", height: 24, plate: false, wordmark: true, alt: "Pari" },
       sector: "Publicidad de performance",
       location: null,
       year: null,
@@ -253,8 +267,8 @@ export const casos = {
       client: "Institución Universitaria EAM",
       logo: {
         src: "/logos/eam.svg",
-        height: 34,
-        plate: true,
+        height: 28,
+        plate: false,
         alt: "Institución Universitaria EAM",
       },
       sector: "Educación superior",

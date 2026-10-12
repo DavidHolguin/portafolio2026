@@ -199,6 +199,53 @@
   animation: node-pulse 2.6s var(--ease-out-expo) infinite;
 }
 
+/* ── Electrones viajando por la rejilla del hero ─── */
+@keyframes electron-x {
+  from {
+    transform: translateX(-20%);
+  }
+  to {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes electron-y {
+  from {
+    transform: translateY(-20%);
+  }
+  to {
+    transform: translateY(120%);
+  }
+}
+
+@utility animate-electron-x {
+  animation: electron-x var(--electron-dur, 14s) linear infinite;
+  animation-delay: var(--electron-delay, 0s);
+  will-change: transform;
+}
+
+@utility animate-electron-y {
+  animation: electron-y var(--electron-dur, 18s) linear infinite;
+  animation-delay: var(--electron-delay, 0s);
+  will-change: transform;
+}
+
+/* ── Entrada del estado recibido en el formulario ─── */
+@keyframes lead-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility animate-lead-rise {
+  animation: lead-rise 0.4s var(--ease-out-expo) both;
+}
+
 /* ── Atmospheric grain overlay (inline data URI) ─── */
 .grain-overlay {
   position: absolute;

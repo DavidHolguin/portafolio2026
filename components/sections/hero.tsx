@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { Container } from "@/components/layout/container";
+import { ElectronFlow } from "@/components/primitives/electron-flow";
 import { EmberGlow } from "@/components/primitives/ember-glow";
 import { EmberParticles } from "@/components/primitives/ember-particles";
 import { GrainOverlay } from "@/components/primitives/grain-overlay";
@@ -37,6 +38,8 @@ export function Hero() {
           maskImage: "radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 100%)",
         }}
       />
+
+      <ElectronFlow />
 
       <Container className="relative">
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-24 items-center">
