@@ -40,7 +40,6 @@ export function Hero() {
 
       <Container className="relative">
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-24 items-center">
-
           {/* Left — Text content */}
           <motion.div
             initial="hidden"
@@ -48,7 +47,6 @@ export function Hero() {
             variants={heroContainer}
             className="flex flex-col items-center text-center lg:items-start lg:text-left"
           >
-            
             <h1
               id="hero-title"
               className="text-balance font-semibold tracking-tighter leading-[0.95] text-foreground"
@@ -85,7 +83,10 @@ export function Hero() {
               className="mt-10 flex items-center justify-center lg:justify-start gap-8 border-t border-border pt-8 w-full max-w-xl"
             >
               {hero.stats.map((stat) => (
-                <div key={stat.label} className="flex flex-col gap-0.5 items-center lg:items-start text-center lg:text-left">
+                <div
+                  key={stat.label}
+                  className="flex flex-col gap-0.5 items-center lg:items-start text-center lg:text-left"
+                >
                   <span className="text-2xl font-bold tracking-tight text-foreground">
                     {stat.value}
                   </span>

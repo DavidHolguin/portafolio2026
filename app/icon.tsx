@@ -8,29 +8,27 @@ export const contentType = "image/png";
 
 export default function Icon() {
   return new ImageResponse(
-    (
-      <div
-        style={{
-          fontSize: 14,
-          background: "rgba(26, 115, 232, 0.1)",
-          borderColor: "rgba(26, 115, 232, 0.2)",
-          borderWidth: 1,
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          color: "#1a73e8",
-          fontFamily: "monospace",
-          fontWeight: "bold",
-          borderRadius: 8,
-        }}
-      >
-        CH
-      </div>
-    ),
+    <div
+      style={{
+        fontSize: 14,
+        background: "rgba(26, 115, 232, 0.1)",
+        borderColor: "rgba(26, 115, 232, 0.2)",
+        borderWidth: 1,
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: "#1a73e8",
+        fontFamily: "monospace",
+        fontWeight: "bold",
+        borderRadius: 8,
+      }}
+    >
+      CH
+    </div>,
     {
       ...size,
-    }
+    },
   );
 }

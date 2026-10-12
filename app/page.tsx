@@ -1,11 +1,11 @@
 import { Footer } from "@/components/layout/footer";
 import { Nav } from "@/components/layout/nav";
+import { Casos } from "@/components/sections/casos";
 import { CtaFinal } from "@/components/sections/cta-final";
 import { FAQ } from "@/components/sections/faq";
 import { GeoIA } from "@/components/sections/geo-ia";
 import { Hero } from "@/components/sections/hero";
 import { Pilares } from "@/components/sections/pilares";
-import { Casos } from "@/components/sections/casos";
 import { Resultados } from "@/components/sections/resultados";
 import { SobreMi } from "@/components/sections/sobre-mi";
 import { Stack } from "@/components/sections/stack";

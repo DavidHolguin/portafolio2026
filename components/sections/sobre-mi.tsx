@@ -17,7 +17,6 @@ export function SobreMi() {
 
       <Container>
         <div className="grid gap-16 lg:grid-cols-[1fr_1.2fr] lg:gap-24 items-start">
-
           {/* Left — About text */}
           <Reveal>
             <div className="flex flex-col gap-8">
@@ -86,7 +85,9 @@ export function SobreMi() {
                   {/* Node */}
                   <div className="relative flex-shrink-0 flex items-start justify-center w-10 pt-0.5">
                     <div className="relative h-10 w-10 flex items-center justify-center rounded-full border border-border-strong bg-background shadow-[0_0_24px_-8px_rgba(26,115,232,0.5)]">
-                      <span className="text-[10px] font-mono text-ember">{event.year.slice(-2)}</span>
+                      <span className="text-[10px] font-mono text-ember">
+                        {event.year.slice(-2)}
+                      </span>
                       {/* pulse ring for first item */}
                       {i === sobreMi.timeline.length - 1 && (
                         <span
@@ -99,7 +100,9 @@ export function SobreMi() {
 
                   {/* Content */}
                   <div className="flex flex-col gap-1 pt-1.5 pb-2">
-                    <span className="font-mono text-xs text-ember tracking-widest">{event.year}</span>
+                    <span className="font-mono text-xs text-ember tracking-widest">
+                      {event.year}
+                    </span>
                     <h3 className="text-base font-semibold text-foreground">{event.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed text-pretty">
                       {event.description}

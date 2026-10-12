@@ -55,20 +55,42 @@ export const hero = {
 };
 
 export const trustStrip = {
-  label: "Experiencia con",
+  label: "He trabajado con",
   brands: [
-    { slug: "rappi", name: "Rappi" },
-    { slug: "renault", name: "Renault" },
-    { slug: "icbf", name: "ICBF" },
-    { slug: "meta", name: "Meta" },
-    { slug: "google", name: "Google" },
-    { slug: "whatsapp", name: "WhatsApp" },
-    { slug: "hubspot", name: "HubSpot" },
-    { slug: "openai", name: "OpenAI" },
-    { slug: "anthropic", name: "Anthropic" },
-    { slug: "googleanalytics", name: "Analytics" },
-    { slug: "supabase", name: "Supabase" },
-    { slug: "nextdotjs", name: "Next.js" },
+    {
+      slug: "rappi",
+      name: "Rappi",
+      src: "/logos/rappi.svg",
+      height: 24,
+      plate: false,
+      wordmark: true,
+    },
+    {
+      slug: "renault",
+      name: "Renault",
+      src: "/logos/renault.svg",
+      height: 24,
+      plate: false,
+      wordmark: false,
+    },
+    { slug: "icbf", name: "ICBF", src: "/logos/icbf.svg", height: 30, plate: true, wordmark: true },
+    {
+      slug: "eam",
+      name: "Institución Universitaria EAM",
+      src: "/logos/eam.svg",
+      height: 30,
+      plate: true,
+      wordmark: true,
+    },
+    {
+      slug: "onlyhome",
+      name: "Only Home",
+      src: "/logos/onlyhome.svg",
+      height: 16,
+      plate: false,
+      wordmark: true,
+    },
+    { slug: "pari", name: "Pari", src: null, height: 22, plate: false, wordmark: false },
   ],
 };
 
@@ -127,78 +149,157 @@ export const pilares = {
 };
 
 export const casos = {
-  eyebrow: "Casos de Éxito",
-  title: "Cuando las tres disciplinas convergen.",
+  eyebrow: "Casos",
+  title: "Seis proyectos. Seis cosas construidas.",
   description:
-    "Proyectos reales donde la integración de ingeniería, datos y growth generó resultados que ninguna disciplina podría lograr sola.",
+    "Cada caso dice qué se hizo. Sin cifras que no pueda sostener delante del cliente que las pregunte.",
   items: [
     {
-      slug: "rappi-mexico",
-      sector: "Tech · Delivery",
+      slug: "rappi",
       client: "Rappi",
-      location: "México",
-      logo: "rappi",
-      reto: "Alta tasa de abandono post-onboarding y bajo retorno de usuarios inactivos. El equipo necesitaba automatizar la reactivación a escala sin incrementar el headcount.",
-      solucion:
-        "Desarrollé un sistema de segmentación comportamental basado en eventos GA4. Implementé un agente de IA para clasificar usuarios por probabilidad de reactivación e integré campañas de re-engagement en Meta y Google Ads con mensajería dinámica personalizada.",
-      resultado: "+42% reactivación",
-      metricas: [
-        { value: "+42%", label: "Reactivación de usuarios" },
-        { value: "-31%", label: "Reducción en CAC" },
-        { value: "3×", label: "ROI en campañas" },
+      logo: { src: "/logos/rappi.svg", height: 26, plate: false, alt: "Rappi" },
+      ally: {
+        src: "/logos/platzi.svg",
+        height: 20,
+        plate: false,
+        alt: "Platzi",
+        label: "en alianza con",
+      },
+      sector: "Marketplace · Educación",
+      location: "LATAM",
+      year: "2023",
+      titular: "La escuela online de las empresarias de Rappi",
+      resumen:
+        "Diseño UI y desarrollo web de la escuela de educación online para los negocios y restaurantes liderados por mujeres dentro de la plataforma, con acceso a estudiar en el catálogo de la alianza Rappi × Platzi.",
+      hechos: [
+        "Diseño UI y desarrollo web de la escuela de educación online.",
+        "Dirigida a las empresas y restaurantes liderados por mujeres que hacen parte de la plataforma.",
+        "El acceso a estudiar venía de la alianza Rappi × Platzi, con los cursos del catálogo de Platzi.",
       ],
-      tags: ["IA", "Analítica", "Paid Media", "CRM"],
+      entregables: ["Diseño UI", "Desarrollo web", "Educación online"],
     },
     {
-      slug: "renault-colombia",
-      sector: "Automotriz · Enterprise",
+      slug: "renault",
       client: "Renault",
+      logo: {
+        src: "/logos/renault.svg",
+        height: 30,
+        plate: false,
+        wordmark: false,
+        alt: "Renault",
+      },
+      sector: "Automotriz",
       location: "Colombia",
-      logo: "renault",
-      reto: "Proceso de captación de leads completamente manual, sin trazabilidad entre inversión publicitaria y ventas reales. El equipo comercial tardaba +48h en responder prospectos.",
-      solucion:
-        "Arquitectura completa: GTM + GA4 server-side + integración Salesforce + agente de IA para calificación y priorización de leads. Implementé dashboards de atribución en tiempo real y campañas multi-canal con audiencias lookalike.",
-      resultado: "+140% leads calificados",
-      metricas: [
-        { value: "+140%", label: "Leads calificados" },
-        { value: "-45%", label: "Tiempo de respuesta comercial" },
-        { value: "100%", label: "Trazabilidad inversión→venta" },
+      year: "2023",
+      titular: "Landings de lanzamiento para los modelos nuevos",
+      resumen:
+        "Desarrollo de la landing page del lanzamiento del Renault Duster 2023 y de la página del evento de lanzamiento del Renault Arkana.",
+      hechos: [
+        "Landing page del lanzamiento del Renault Duster 2023.",
+        "Landing page del evento de lanzamiento del Renault Arkana.",
+        "Diseño y desarrollo web de cada pieza, una por lanzamiento.",
       ],
-      tags: ["CRM", "Analítica", "Paid Media", "Automatización"],
+      entregables: ["Landing page", "Diseño web", "Desarrollo web"],
     },
     {
-      slug: "icbf-gobierno",
-      sector: "Gobierno · Impacto Social",
+      slug: "icbf",
       client: "ICBF",
+      logo: { src: "/logos/icbf.svg", height: 34, plate: true, alt: "ICBF" },
+      sector: "Gobierno · Impacto social",
       location: "Colombia",
-      logo: "icbf",
-      reto: "Necesidad de llevar un programa de bienestar familiar a comunidades vulnerables con tecnología accesible, medible y escalable. Sin precedentes tecnológicos en el sector.",
-      solucion:
-        "Desarrollé plataforma digital con elementos de gamificación para aumentar engagement. Implementé un chatbot de IA en WhatsApp para atención 24/7 y construí un sistema de analítica de impacto social para medir resultados en campo.",
-      resultado: "+50K familias alcanzadas",
-      metricas: [
-        { value: "50K+", label: "Familias beneficiadas" },
-        { value: "94%", label: "Satisfacción de usuarios" },
-        { value: "3×", label: "Departamentos replicaron el modelo" },
+      year: "2023",
+      titular: "Modelo de atención y capacidad de explorar el empleo",
+      resumen:
+        "Consultoría e investigación aplicada sobre el modelo de atención del Sistema de Responsabilidad Penal para Adolescentes, con guías para explorar el empleo desde la Industria 4.0.",
+      hechos: [
+        "Investigación sobre el modelo de atención del Sistema de Responsabilidad Penal para Adolescentes (SRPA).",
+        "Desarrollo de guías y de capacidad para explorar el empleo.",
+        "Industria 4.0 como motor de nuevos empleos y nuevas habilidades, con los requerimientos de educación que trae para comunidades vulnerables y personas con necesidades especiales.",
+        "Enfoque de consultoría, a partir de la experiencia previa en proyectos de Industria 4.0 para prevenir conductas delictivas en adolescentes y jóvenes que egresan del SRPA.",
       ],
-      tags: ["Desarrollo", "Gamificación", "IA", "WhatsApp API"],
+      entregables: [
+        "Consultoría",
+        "Investigación aplicada",
+        "Guías metodológicas",
+        "Industria 4.0",
+      ],
     },
     {
-      slug: "pari-fintech",
-      sector: "Fintech · Startup",
+      slug: "pari",
       client: "Pari",
-      location: "México",
-      logo: "pari",
-      reto: "Producto fintech nuevo en mercado altamente competitivo. Necesidad de validar product-market fit rápido, adquirir usuarios de calidad y automatizar el onboarding con presupuesto limitado.",
-      solucion:
-        "Estrategia full-funnel: landing optimizada con A/B testing continuo + paid media en Meta segmentado por comportamiento financiero + agente de IA para onboarding interactivo. Toda la atribución conectada desde el primer clic hasta la activación.",
-      resultado: "0 → 10K usuarios en 90 días",
-      metricas: [
-        { value: "10K", label: "Usuarios en 90 días" },
-        { value: "$8 USD", label: "CAC promedio" },
-        { value: "72", label: "NPS de producto" },
+      logo: null,
+      sector: "Publicidad de performance",
+      location: null,
+      year: "2023",
+      titular: "Administración de anuncios a gran escala",
+      resumen:
+        "Rol de trafficker de la marca: administración de 10.000 dólares mensuales de inversión publicitaria distribuidos entre canales de anuncios, con compra programática y analítica de datos.",
+      hechos: [
+        "Administración de una inversión publicitaria de 10.000 USD mensuales.",
+        "Distribución del presupuesto entre los canales de anuncios.",
+        "Compra programática.",
+        "Analítica de datos para leer el rendimiento de la inversión.",
       ],
-      tags: ["Growth", "Paid Media", "IA", "Analítica"],
+      entregables: ["Gestión de pauta", "Compra programática", "Analítica de datos"],
+      plataformas: [
+        { slug: "meta", name: "Meta Ads" },
+        { slug: "google", name: "Google Ads" },
+        { slug: "tiktok", name: "TikTok Ads" },
+        { slug: "linkedin", name: "LinkedIn Ads" },
+      ],
+    },
+    {
+      slug: "eam",
+      client: "Institución Universitaria EAM",
+      logo: {
+        src: "/logos/eam.svg",
+        height: 34,
+        plate: true,
+        alt: "Institución Universitaria EAM",
+      },
+      sector: "Educación superior",
+      location: "Armenia, Quindío",
+      year: "2022 — 2026",
+      titular: "Un CRM a medida, con IA, para las admisiones",
+      resumen:
+        "El caso más amplio: CRM a medida impulsado por inteligencia artificial, extracción de datos de documentos para las jornadas de matrícula, herramientas de SEM para las ferias y captación con voz en las jornadas estudiantiles.",
+      hechos: [
+        "CRM a medida impulsado por inteligencia artificial para la atención y respuesta a los prospectos.",
+        "Extracción de datos de documentos para las jornadas de matrícula.",
+        "Herramientas de SEM para impulsar eventos como las ferias vocacionales.",
+        "Herramientas de voz con IA para la captación en ferias estudiantiles.",
+      ],
+      entregables: [
+        "CRM a medida",
+        "Inteligencia artificial",
+        "Extracción de documentos",
+        "SEM",
+        "Voz con IA",
+      ],
+    },
+    {
+      slug: "only-home",
+      client: "Only Home",
+      logo: { src: "/logos/onlyhome.svg", height: 18, plate: false, alt: "Only Home" },
+      sector: "Logística · Manufactura · Retail",
+      location: "Colombia",
+      year: "2025 — 2026",
+      titular: "Biometría, nómina y agentes de IA en la operación",
+      resumen:
+        "Control de ingresos y egresos con reconocimiento facial en los establecimientos y fábricas de la red, novedades de nómina para el pago a gran escala, y agentes de IA para ventas, soporte del pedido y la operación comercial.",
+      hechos: [
+        "Sistema de biometría para el control de ingresos y egresos en los establecimientos y fábricas de la red, con dispositivos y cámaras de reconocimiento facial.",
+        "Nómina y novedades de nómina para el pago a gran escala.",
+        "Agentes de inteligencia artificial para ventas y para el soporte del pedido del cliente.",
+        "Un agente para la operación comercial que le da soporte al equipo operativo y logístico, de la venta a la producción y la entrega.",
+      ],
+      entregables: [
+        "Biometría facial",
+        "Control de accesos",
+        "Nómina y novedades",
+        "Agentes de IA",
+        "Operación comercial",
+      ],
     },
   ],
 };
@@ -272,7 +373,8 @@ export const sobreMi = {
     {
       year: "2014",
       title: "Desarrollo de Software",
-      description: "Inicié construyendo soluciones a medida. Aprendí que el código bien escrito cambia negocios.",
+      description:
+        "Inicié construyendo soluciones a medida. Aprendí que el código bien escrito cambia negocios.",
     },
     {
       year: "2016",
@@ -282,17 +384,20 @@ export const sobreMi = {
     {
       year: "2018",
       title: "CRM & Automatización",
-      description: "Diseñé integraciones complejas para empresas como Renault. El CRM conectado al funnel completo.",
+      description:
+        "Diseñé integraciones complejas para empresas como Renault. El CRM conectado al funnel completo.",
     },
     {
       year: "2020",
       title: "Impacto Social",
-      description: "Fundé proyectos de impacto. Tecnología con propósito para comunidades vulnerables (ICBF).",
+      description:
+        "Fundé proyectos de impacto. Tecnología con propósito para comunidades vulnerables (ICBF).",
     },
     {
       year: "2022",
       title: "IA & Agentes Inteligentes",
-      description: "Deep dive en IA generativa. Construcción de agentes autónomos para automatización empresarial.",
+      description:
+        "Deep dive en IA generativa. Construcción de agentes autónomos para automatización empresarial.",
     },
     {
       year: "2024",
@@ -301,7 +406,18 @@ export const sobreMi = {
         "Adopté GEO (Generative Engine Optimization) antes de que se popularizara. LATAM está apenas despertando a esto.",
     },
   ],
-  badges: ["IA & Agentes", "GEO", "Meta Ads", "Google Ads", "GA4 / GTM", "CRM", "WhatsApp API", "Gamificación", "Psicología del comportamiento", "Desarrollo a medida"],
+  badges: [
+    "IA & Agentes",
+    "GEO",
+    "Meta Ads",
+    "Google Ads",
+    "GA4 / GTM",
+    "CRM",
+    "WhatsApp API",
+    "Gamificación",
+    "Psicología del comportamiento",
+    "Desarrollo a medida",
+  ],
 };
 
 export const resultados = {
@@ -355,8 +471,7 @@ export const ctaFinal = {
   title: "¿Tienes un proyecto que necesita escalar?",
   description:
     "Si tienes un embudo que no convierte, un proceso que se puede automatizar, o un producto que necesita crecer — analicemos tu caso. Sin fórmulas, sin paquetes, solo estrategia.",
-  waMessage:
-    "Hola Cristian, vengo de tu portafolio y quiero conversar sobre mi proyecto.",
+  waMessage: "Hola Cristian, vengo de tu portafolio y quiero conversar sobre mi proyecto.",
 };
 
 export const faq = {

@@ -61,7 +61,10 @@ export function CtaFinal() {
               <span aria-hidden className="h-px flex-1 bg-border" />
             </div>
 
-            <LeadForm source="Cristian Holguin · Portafolio" className="w-full max-w-xl text-left" />
+            <LeadForm
+              source="Cristian Holguin · Portafolio"
+              className="w-full max-w-xl text-left"
+            />
           </div>
         </Reveal>
       </Container>

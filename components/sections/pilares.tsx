@@ -92,7 +92,9 @@ export function Pilares() {
                   <div className="flex flex-col gap-1">
                     <div className="inline-flex items-center gap-2 mb-1">
                       <span aria-hidden className={`h-1.5 w-1.5 rounded-full ${colors.dot}`} />
-                      <span className={`text-xs font-mono uppercase tracking-[0.18em] ${colors.label}`}>
+                      <span
+                        className={`text-xs font-mono uppercase tracking-[0.18em] ${colors.label}`}
+                      >
                         {pilar.tagline}
                       </span>
                     </div>

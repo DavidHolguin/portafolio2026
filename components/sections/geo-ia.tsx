@@ -40,7 +40,6 @@ export function GeoIA() {
 
       <Container>
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-24 items-center">
-
           {/* Left — Content */}
           <Reveal>
             <div className="flex flex-col gap-8">

@@ -78,6 +78,10 @@ const TEXT_BADGES: Record<string, TextBadge> = {
   siesa: { text: "Siesa", accent: "F25C29" },
   siigo: { text: "Siigo", accent: "FBB03B" },
   worldoffice: { text: "WO", accent: "1C70E7" },
+  // Simple Icons ya no publica estas marcas: sello tipográfico
+  linkedin: { text: "in", accent: "0A66C2" },
+  googletag: { text: "GTM", accent: "4285F4" },
+  salesforce: { text: "SF", accent: "00A1E0" },
 };
 
 /**

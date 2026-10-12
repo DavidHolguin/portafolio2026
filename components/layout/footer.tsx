@@ -39,7 +39,9 @@ export function Footer() {
               <ul className="flex flex-col gap-2.5">
                 <li>
                   <a
-                    href={whatsappUrl("Hola Cristian, vengo del footer de tu portafolio. Quiero conversar.")}
+                    href={whatsappUrl(
+                      "Hola Cristian, vengo del footer de tu portafolio. Quiero conversar.",
+                    )}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -47,7 +49,6 @@ export function Footer() {
                     WhatsApp {site.contact.whatsappDisplay}
                   </a>
                 </li>
-               
               </ul>
             </div>
 
