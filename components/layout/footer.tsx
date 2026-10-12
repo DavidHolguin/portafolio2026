@@ -51,7 +51,7 @@ export function Footer() {
             <p className="mt-4 text-pretty text-sm text-muted-foreground">{footer.tagline}</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-x-12 gap-y-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-y-8 gap-x-12 sm:grid-cols-2 md:grid-cols-3">
             <div>
               <h3 className="mb-4 text-xs font-medium uppercase tracking-wider text-subtle">
                 Portafolio
@@ -80,10 +80,10 @@ export function Footer() {
                     <a
                       href={canal.href}
                       {...(canal.externo ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                      className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                      className="inline-flex max-w-full items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
                     >
                       <span className="text-foreground/70">{canal.icono}</span>
-                      {canal.label}
+                      <span className="min-w-0 [overflow-wrap:anywhere]">{canal.label}</span>
                     </a>
                   </li>
                 ))}
