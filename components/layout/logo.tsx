@@ -16,20 +16,13 @@ export function Logo({ size = "sm", href = "/", className }: LogoProps) {
         className,
       )}
     >
-      {/* Monogram CH */}
-      <span
-        className={cn(
-          "relative flex items-center justify-center rounded-lg bg-ember/10 border border-ember/20 font-mono font-bold tracking-tight text-ember shrink-0",
-          "shadow-[0_0_20px_-4px_rgba(26,115,232,0.5)]",
-          size === "sm" ? "h-7 w-7 text-xs" : "h-9 w-9 text-sm",
-        )}
-      >
-        CH
-        <span
-          aria-hidden
-          className="absolute inset-0 rounded-lg bg-gradient-to-br from-ember/20 to-transparent"
-        />
-      </span>
+      {/* Marca CHdev, junto al nombre */}
+      {/* biome-ignore lint/performance/noImgElement: PNG local de la marca */}
+      <img
+        src="/logo-chdev.png"
+        alt="CHdev"
+        className={cn("block w-auto shrink-0 select-none", size === "sm" ? "h-6" : "h-8")}
+      />
 
       <span
         className={cn(

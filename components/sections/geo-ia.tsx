@@ -116,6 +116,19 @@ export function GeoIA() {
                       "radial-gradient(ellipse 70% 50% at 50% 30%, rgba(26,115,232,0.12) 0%, transparent 70%)",
                   }}
                 />
+                {/* La misma rejilla del hero, en cuadros más grandes */}
+                <div
+                  aria-hidden
+                  className="absolute inset-0 rounded-3xl"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
+                    backgroundSize: "116px 116px",
+                    opacity: 0.06,
+                    maskImage:
+                      "radial-gradient(ellipse 85% 70% at 50% 45%, black 35%, transparent 100%)",
+                  }}
+                />
 
                 <span className="relative text-xs font-mono uppercase tracking-[0.22em] text-ember">
                   Dato clave

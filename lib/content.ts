@@ -4,7 +4,7 @@ export const site = {
   tagline: "Ingeniería · Growth · IA",
   description:
     "12 años conectando código, datos y growth marketing para construir productos que escalan y convierten. Especialista en IA, GEO y ecosistemas digitales de alto impacto en LATAM.",
-  url: "https://prometheuslabs.com.co",
+  url: "https://portafolio.prometheuslabs.com.co",
   locale: "es_CO",
   contact: {
     email: "ceo@prometheuslabs.com.co",
@@ -345,6 +345,55 @@ export const casos = {
         "Operación comercial",
       ],
     },
+    {
+      slug: "mydriver",
+      client: "MyDriver",
+      logo: {
+        src: "/logos/mydriver.svg",
+        height: 30,
+        plate: false,
+        wordmark: true,
+        alt: "MyDriver",
+      },
+      sector: "Movilidad · Transporte",
+      location: "México",
+      pais: "MX",
+      year: null,
+      titular: "Sitio, CRM y pauta para captar clientes y conductores",
+      resumen:
+        "Diseño y desarrollo del sitio, el CRM y la administración de anuncios: la captación de nuevos clientes y de nuevos conductores en un solo sistema.",
+      hechos: [
+        "Diseño y desarrollo web del sitio.",
+        "CRM para clientes y conductores.",
+        "Administración de anuncios para la captación de clientes y conductores.",
+      ],
+      entregables: [
+        "Diseño y desarrollo web",
+        "CRM",
+        "Gestión de pauta",
+        "Captación de conductores",
+      ],
+    },
+    {
+      slug: "rsp",
+      client: "RSP Tlaxcala",
+      logo: {
+        src: "/logos/rsp.svg",
+        height: 30,
+        plate: false,
+        wordmark: true,
+        alt: "RSP Tlaxcala",
+      },
+      sector: "Política · Comunicación",
+      location: "Tlaxcala, México",
+      pais: "MX",
+      year: null,
+      titular: "La administración del sitio web y sus publicaciones",
+      resumen:
+        "Administración del sitio web de la organización: contenido, publicaciones digitales y el material editorial de la revista.",
+      hechos: ["Administración del sitio web.", "Publicaciones y material editorial digital."],
+      entregables: ["Administración web", "Contenido y publicaciones"],
+    },
   ],
 };
 
@@ -551,7 +600,6 @@ export const faq = {
 
 export const footer = {
   tagline: "Ingeniería · Growth · IA · GEO — Hecho en Colombia para LATAM.",
-  copyright: `© ${new Date().getFullYear()} Cristian Holguin. Colombia.`,
   links: [
     { label: "Expertise", href: "#pilares" },
     { label: "Proyectos", href: "#casos" },
