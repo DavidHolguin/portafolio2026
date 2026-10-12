@@ -244,7 +244,7 @@ export const casos = {
     {
       slug: "icbf",
       client: "ICBF",
-      logo: { src: "/logos/icbf.png", height: 42, plate: false, alt: "ICBF" },
+      logo: { src: "/logos/icbf.png", height: 46, plate: false, alt: "ICBF" },
       sector: "Gobierno · Impacto social",
       location: "Colombia",
       pais: "CO",
