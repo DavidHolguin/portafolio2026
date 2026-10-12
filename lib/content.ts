@@ -149,10 +149,10 @@ export const pilares = {
 };
 
 export const casos = {
-  eyebrow: "Casos",
-  title: "Seis proyectos. Seis cosas construidas.",
+  eyebrow: "Proyectos",
+  title: "Diseño, código y datos resolviendo problemas de negocio.",
   description:
-    "Cada caso dice qué se hizo. Sin cifras que no pueda sostener delante del cliente que las pregunte.",
+    "Una muestra del trabajo: una escuela de educación online, lanzamientos de marca, un CRM con IA, biometría y nómina a escala, investigación pública y gestión de pauta en todas las plataformas. Cada proyecto abre con lo que se construyó, con el cliente nombrado.",
   items: [
     {
       slug: "rappi",

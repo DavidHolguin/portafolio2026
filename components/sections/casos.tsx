@@ -170,7 +170,7 @@ export function Casos() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-ember"
           >
-            ¿Tienes un proyecto parecido?
+            ¿Algo así pendiente en tu operación?
             <ArrowUpRight className="h-4 w-4" />
           </a>
         </Reveal>
