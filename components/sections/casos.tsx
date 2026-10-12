@@ -128,7 +128,7 @@ export function Casos() {
                         ·
                       </span>
                       <span className="flex items-center gap-1.5">
-                        {caso.pais && <Flag codigo={caso.pais} />}
+                        {caso.pais && <Flag codigo={caso.pais} className="h-3.5 w-[21px]" />}
                         {caso.location}
                       </span>
                     </>

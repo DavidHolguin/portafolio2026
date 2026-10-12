@@ -56,8 +56,6 @@ export const hero = {
 
 export const trustStrip = {
   label: "He trabajado con",
-  /** Los países, para el renglón de «proyectos en»: se ven las banderas de una. */
-  paises: ["CO", "MX", "BR"],
   brands: [
     {
       slug: "rappi",
@@ -80,7 +78,7 @@ export const trustStrip = {
     {
       slug: "icbf",
       name: "ICBF",
-      src: "/logos/icbf.svg",
+      src: "/logos/icbf.png",
       height: 34,
       plate: false,
       wordmark: true,
@@ -246,7 +244,7 @@ export const casos = {
     {
       slug: "icbf",
       client: "ICBF",
-      logo: { src: "/logos/icbf.svg", height: 36, plate: false, alt: "ICBF" },
+      logo: { src: "/logos/icbf.png", height: 42, plate: false, alt: "ICBF" },
       sector: "Gobierno · Impacto social",
       location: "Colombia",
       pais: "CO",

@@ -1,5 +1,4 @@
 import { Container } from "@/components/layout/container";
-import { Flag } from "@/components/primitives/flag";
 import { trustStrip } from "@/lib/content";
 
 interface Brand {
@@ -7,21 +6,18 @@ interface Brand {
   name: string;
   src: string | null;
   height: number;
-  plate: boolean;
   /** false = el archivo es solo el símbolo y hay que escribir el nombre al lado */
   wordmark: boolean;
-  /** País del cliente: CO · MX · BR (null = proyecto regional) */
+  /** País del cliente. Hoy solo lo usa la sección de proyectos, no esta franja. */
   pais: string | null;
 }
 
 const brands = trustStrip.brands as Brand[];
-const paises = trustStrip.paises as string[];
 
 /**
- * Franja de clientes. Los logos son los oficiales (archivos en /public/logos) y
- * cada uno lleva la bandera de su país, con el renglón de «proyectos en» debajo:
- * lo que hay que entender de un vistazo es que el trabajo no es de un solo país.
- * Las herramientas viven en la sección de stack, no aquí.
+ * Franja de clientes: la animación del «he trabajado con». Va solo con los logos
+ * —sin banderas y sin renglón de países—: el origen de cada empresa se cuenta
+ * donde se cuenta cada proyecto, no en esta tira.
  */
 export function TrustStrip() {
   // Duplicado para el desplazamiento continuo
@@ -56,7 +52,7 @@ export function TrustStrip() {
                 >
                   {brand.src ? (
                     <>
-                      {/* biome-ignore lint/performance/noImgElement: logo SVG local */}
+                      {/* biome-ignore lint/performance/noImgElement: logo local, no necesita optimización */}
                       <img
                         src={brand.src}
                         alt={brand.name}
@@ -74,27 +70,10 @@ export function TrustStrip() {
                       {brand.name}
                     </span>
                   )}
-                  {brand.pais && <Flag codigo={brand.pais} className="ml-1" />}
                 </li>
               ))}
             </ul>
           </div>
-        </div>
-
-        <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border pt-5">
-          <span className="font-mono text-xs uppercase tracking-[0.22em] text-muted-foreground">
-            Proyectos en
-          </span>
-          <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            {paises.map((codigo) => (
-              <li key={codigo} className="flex items-center gap-2">
-                <Flag codigo={codigo} className="h-4 w-6" />
-                <span className="text-sm text-muted-foreground">
-                  {codigo === "CO" ? "Colombia" : codigo === "MX" ? "México" : "Brasil"}
-                </span>
-              </li>
-            ))}
-          </ul>
         </div>
       </Container>
     </section>
