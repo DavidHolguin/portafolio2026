@@ -21,7 +21,7 @@ export function Logo({ size = "sm", href = "/", className }: LogoProps) {
       <img
         src="/logo-chdev.png"
         alt="CHdev"
-        className={cn("block w-auto shrink-0 select-none", size === "sm" ? "h-6" : "h-8")}
+        className={cn("block w-auto shrink-0 select-none", size === "sm" ? "h-7" : "h-10")}
       />
 
       <span
