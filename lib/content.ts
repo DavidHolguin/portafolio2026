@@ -79,7 +79,7 @@ export const trustStrip = {
       slug: "icbf",
       name: "ICBF",
       src: "/logos/icbf.png",
-      height: 34,
+      height: 40,
       plate: false,
       wordmark: true,
       pais: "CO",
