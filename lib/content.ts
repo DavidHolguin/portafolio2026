@@ -167,7 +167,7 @@ export const casos = {
       },
       sector: "Marketplace · Educación",
       location: "LATAM",
-      year: "2023",
+      year: null,
       titular: "La escuela online de las empresarias de Rappi",
       resumen:
         "Diseño UI y desarrollo web de la escuela de educación online para los negocios y restaurantes liderados por mujeres dentro de la plataforma, con acceso a estudiar en el catálogo de la alianza Rappi × Platzi.",
@@ -207,7 +207,7 @@ export const casos = {
       logo: { src: "/logos/icbf.svg", height: 34, plate: true, alt: "ICBF" },
       sector: "Gobierno · Impacto social",
       location: "Colombia",
-      year: "2023",
+      year: null,
       titular: "Modelo de atención y capacidad de explorar el empleo",
       resumen:
         "Consultoría e investigación aplicada sobre el modelo de atención del Sistema de Responsabilidad Penal para Adolescentes, con guías para explorar el empleo desde la Industria 4.0.",
@@ -230,7 +230,7 @@ export const casos = {
       logo: null,
       sector: "Publicidad de performance",
       location: null,
-      year: "2023",
+      year: null,
       titular: "Administración de anuncios a gran escala",
       resumen:
         "Rol de trafficker de la marca: administración de 10.000 dólares mensuales de inversión publicitaria distribuidos entre canales de anuncios, con compra programática y analítica de datos.",
@@ -259,7 +259,7 @@ export const casos = {
       },
       sector: "Educación superior",
       location: "Armenia, Quindío",
-      year: "2022 — 2026",
+      year: null,
       titular: "Un CRM a medida, con IA, para las admisiones",
       resumen:
         "El caso más amplio: CRM a medida impulsado por inteligencia artificial, extracción de datos de documentos para las jornadas de matrícula, herramientas de SEM para las ferias y captación con voz en las jornadas estudiantiles.",
@@ -283,7 +283,7 @@ export const casos = {
       logo: { src: "/logos/onlyhome.svg", height: 18, plate: false, alt: "Only Home" },
       sector: "Logística · Manufactura · Retail",
       location: "Colombia",
-      year: "2025 — 2026",
+      year: null,
       titular: "Biometría, nómina y agentes de IA en la operación",
       resumen:
         "Control de ingresos y egresos con reconocimiento facial en los establecimientos y fábricas de la red, novedades de nómina para el pago a gran escala, y agentes de IA para ventas, soporte del pedido y la operación comercial.",

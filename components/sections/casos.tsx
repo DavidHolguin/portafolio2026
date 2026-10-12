@@ -27,7 +27,7 @@ interface Caso {
   ally?: LogoSpec & { label: string };
   sector: string;
   location: string | null;
-  year: string;
+  year: string | null;
   titular: string;
   resumen: string;
   hechos: string[];
@@ -111,9 +111,11 @@ export function Casos() {
               <article className="group flex h-full flex-col gap-5 rounded-2xl border border-border bg-card/60 p-6 transition-colors duration-300 hover:border-ember/40 hover:bg-card">
                 <div className="flex items-start justify-between gap-4">
                   <ClientLogo logo={caso.logo} nombre={caso.client} className="text-foreground" />
-                  <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-subtle">
-                    {caso.year}
-                  </span>
+                  {caso.year && (
+                    <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-subtle">
+                      {caso.year}
+                    </span>
+                  )}
                 </div>
 
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
@@ -203,8 +205,7 @@ export function Casos() {
 
                 <div className="flex flex-col gap-2">
                   <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-subtle">
-                    {activo.sector}
-                    {activo.location ? ` · ${activo.location}` : ""} · {activo.year}
+                    {[activo.sector, activo.location, activo.year].filter(Boolean).join(" · ")}
                   </span>
                   <DialogTitle>{activo.titular}</DialogTitle>
                   <DialogDescription>{activo.resumen}</DialogDescription>
