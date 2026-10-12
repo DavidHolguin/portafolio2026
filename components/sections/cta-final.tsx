@@ -54,11 +54,11 @@ export function CtaFinal() {
             </div>
 
             <div className="mt-6 flex w-full max-w-xl items-center gap-3">
-              <span aria-hidden className="h-px flex-1 bg-border" />
-              <span className="text-xs font-mono uppercase tracking-[0.18em] text-subtle">
+              <span aria-hidden className="h-px flex-1 bg-foreground/35" />
+              <span className="font-mono text-xs uppercase tracking-[0.18em] text-foreground/85">
                 o déjame tu contacto
               </span>
-              <span aria-hidden className="h-px flex-1 bg-border" />
+              <span aria-hidden className="h-px flex-1 bg-foreground/35" />
             </div>
 
             <div className="relative mt-4 w-full max-w-xl">

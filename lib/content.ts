@@ -56,6 +56,8 @@ export const hero = {
 
 export const trustStrip = {
   label: "He trabajado con",
+  /** Los países, para el renglón de «proyectos en»: se ven las banderas de una. */
+  paises: ["CO", "MX", "BR"],
   brands: [
     {
       slug: "rappi",
@@ -64,6 +66,7 @@ export const trustStrip = {
       height: 24,
       plate: false,
       wordmark: true,
+      pais: null,
     },
     {
       slug: "renault",
@@ -72,6 +75,7 @@ export const trustStrip = {
       height: 24,
       plate: false,
       wordmark: false,
+      pais: "CO",
     },
     {
       slug: "icbf",
@@ -80,6 +84,7 @@ export const trustStrip = {
       height: 34,
       plate: false,
       wordmark: true,
+      pais: "CO",
     },
     {
       slug: "eam",
@@ -88,6 +93,7 @@ export const trustStrip = {
       height: 26,
       plate: false,
       wordmark: true,
+      pais: "CO",
     },
     {
       slug: "onlyhome",
@@ -96,6 +102,25 @@ export const trustStrip = {
       height: 16,
       plate: false,
       wordmark: true,
+      pais: "CO",
+    },
+    {
+      slug: "mydriver",
+      name: "MyDriver",
+      src: "/logos/mydriver.svg",
+      height: 30,
+      plate: false,
+      wordmark: true,
+      pais: "MX",
+    },
+    {
+      slug: "rsp",
+      name: "RSP Tlaxcala",
+      src: "/logos/rsp.svg",
+      height: 28,
+      plate: false,
+      wordmark: true,
+      pais: "MX",
     },
     {
       slug: "pari",
@@ -104,6 +129,7 @@ export const trustStrip = {
       height: 22,
       plate: false,
       wordmark: true,
+      pais: "MX",
     },
   ],
 };
@@ -181,6 +207,7 @@ export const casos = {
       },
       sector: "Marketplace · Educación",
       location: "LATAM",
+      pais: null,
       year: null,
       titular: "La escuela online de las empresarias de Rappi",
       resumen:
@@ -204,6 +231,7 @@ export const casos = {
       },
       sector: "Automotriz",
       location: "Colombia",
+      pais: "CO",
       year: "2023",
       titular: "Landings de lanzamiento para los modelos nuevos",
       resumen:
@@ -221,6 +249,7 @@ export const casos = {
       logo: { src: "/logos/icbf.svg", height: 36, plate: false, alt: "ICBF" },
       sector: "Gobierno · Impacto social",
       location: "Colombia",
+      pais: "CO",
       year: null,
       titular: "Modelo de atención y capacidad de explorar el empleo",
       resumen:
@@ -243,7 +272,8 @@ export const casos = {
       client: "Pari",
       logo: { src: "/logos/pari.png", height: 24, plate: false, wordmark: true, alt: "Pari" },
       sector: "Publicidad de performance",
-      location: null,
+      location: "México",
+      pais: "MX",
       year: null,
       titular: "Administración de anuncios a gran escala",
       resumen:
@@ -273,6 +303,7 @@ export const casos = {
       },
       sector: "Educación superior",
       location: "Armenia, Quindío",
+      pais: "CO",
       year: null,
       titular: "Un CRM a medida, con IA, para las admisiones",
       resumen:
@@ -297,6 +328,7 @@ export const casos = {
       logo: { src: "/logos/onlyhome.svg", height: 18, plate: false, alt: "Only Home" },
       sector: "Logística · Manufactura · Retail",
       location: "Colombia",
+      pais: "CO",
       year: null,
       titular: "Biometría, nómina y agentes de IA en la operación",
       resumen:

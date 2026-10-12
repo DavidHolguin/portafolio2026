@@ -110,7 +110,12 @@ export function Hero() {
                   <ArrowRight className="ml-1" />
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="w-full border-foreground/45 hover:border-foreground hover:bg-foreground/5 sm:w-auto"
+              >
                 <a href={hero.secondaryCta.href}>{hero.secondaryCta.label}</a>
               </Button>
             </motion.div>

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/motion/reveal";
 import { BrandLogo } from "@/components/primitives/brand-logo";
+import { Flag } from "@/components/primitives/flag";
 import { SectionHeading } from "@/components/primitives/section-heading";
 import { WhatsAppIcon } from "@/components/primitives/whatsapp-icon";
 import { Button } from "@/components/ui/button";
@@ -27,6 +28,7 @@ interface Caso {
   ally?: LogoSpec & { label: string };
   sector: string;
   location: string | null;
+  pais: string | null;
   year: string | null;
   titular: string;
   resumen: string;
@@ -125,7 +127,10 @@ export function Casos() {
                       <span aria-hidden className="text-subtle">
                         ·
                       </span>
-                      <span>{caso.location}</span>
+                      <span className="flex items-center gap-1.5">
+                        {caso.pais && <Flag codigo={caso.pais} />}
+                        {caso.location}
+                      </span>
                     </>
                   )}
                 </div>
