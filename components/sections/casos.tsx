@@ -112,7 +112,7 @@ export function Casos() {
                 <div className="flex items-start justify-between gap-4">
                   <ClientLogo logo={caso.logo} nombre={caso.client} className="text-foreground" />
                   {caso.year && (
-                    <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-subtle">
+                    <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
                       {caso.year}
                     </span>
                   )}
@@ -204,7 +204,7 @@ export function Casos() {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-subtle">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
                     {[activo.sector, activo.location, activo.year].filter(Boolean).join(" · ")}
                   </span>
                   <DialogTitle>{activo.titular}</DialogTitle>
@@ -214,7 +214,7 @@ export function Casos() {
 
               <div className="flex flex-col gap-7 overflow-y-auto p-6">
                 <div className="flex flex-col gap-3">
-                  <h4 className="font-mono text-[10px] uppercase tracking-[0.16em] text-subtle">
+                  <h4 className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
                     Qué se hizo
                   </h4>
                   <ul className="flex flex-col gap-3">
@@ -230,7 +230,7 @@ export function Casos() {
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <h4 className="font-mono text-[10px] uppercase tracking-[0.16em] text-subtle">
+                  <h4 className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
                     Entregables
                   </h4>
                   <ul className="flex flex-wrap gap-1.5">
@@ -247,7 +247,7 @@ export function Casos() {
 
                 {activo.plataformas && (
                   <div className="flex flex-col gap-3">
-                    <h4 className="font-mono text-[10px] uppercase tracking-[0.16em] text-subtle">
+                    <h4 className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
                       Plataformas de anuncios
                     </h4>
                     <ul className="flex flex-wrap items-center gap-x-6 gap-y-3">

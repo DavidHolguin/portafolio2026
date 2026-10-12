@@ -23,7 +23,7 @@ const PANEL = "bg-[#0c0d0f]";
 const campo =
   "peer h-12 w-full rounded-xl border border-border-strong bg-background/60 px-4 text-sm text-foreground transition-colors duration-200 focus:border-ember/70 focus:outline-none focus:ring-2 focus:ring-ember/25";
 
-const etiqueta = `pointer-events-none absolute -top-2 left-3 px-2 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground transition-colors duration-200 peer-focus:text-ember ${PANEL}`;
+const etiqueta = `pointer-events-none absolute -top-2 left-3 px-2 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground transition-colors duration-200 peer-focus:text-ember-bright ${PANEL}`;
 
 export function LeadForm({ source, submitLabel = "Enviar mi contacto", className }: LeadFormProps) {
   const [state, formAction, isPending] = useActionState(submitLead, initialState);
@@ -74,7 +74,7 @@ export function LeadForm({ source, submitLabel = "Enviar mi contacto", className
       />
 
       <div className="flex flex-col gap-1.5 text-left">
-        <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ember">
+        <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ember-bright">
           Déjame tu contacto
         </span>
         <span className="text-pretty text-sm leading-relaxed text-muted-foreground">
@@ -159,7 +159,7 @@ export function LeadForm({ source, submitLabel = "Enviar mi contacto", className
         </p>
       )}
 
-      <p className="text-[11px] leading-relaxed text-subtle">
+      <p className="text-[11px] leading-relaxed text-muted-foreground">
         Al enviar aceptas que te contacte por WhatsApp o llamada. Tus datos quedan en mi CRM y no se
         comparten con terceros.
       </p>

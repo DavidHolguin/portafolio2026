@@ -29,7 +29,7 @@ export function TrustStrip() {
     >
       <Container>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-12">
-          <span className="shrink-0 font-mono text-xs uppercase tracking-[0.22em] text-subtle">
+          <span className="shrink-0 font-mono text-xs uppercase tracking-[0.22em] text-muted-foreground">
             {trustStrip.label}
           </span>
 
