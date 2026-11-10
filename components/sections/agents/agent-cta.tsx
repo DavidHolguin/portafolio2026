@@ -1,21 +1,16 @@
-import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/motion/reveal";
 import { EmberGlow } from "@/components/primitives/ember-glow";
 import { GrainOverlay } from "@/components/primitives/grain-overlay";
-import { LeadForm } from "@/components/primitives/lead-form";
-import { WhatsAppIcon } from "@/components/primitives/whatsapp-icon";
-import { Button } from "@/components/ui/button";
+import { WhatsAppPanel } from "@/components/primitives/whatsapp-panel";
 import type { Agent } from "@/lib/agents";
-import { whatsappUrl } from "@/lib/content";
 
 interface AgentCtaProps {
   agent: Agent;
 }
 
 export function AgentCta({ agent }: AgentCtaProps) {
-  const waMessage = `Hola Prometheus, me interesa el ${agent.name}. ¿Cómo arrancamos?`;
-  const source = `${agent.name} (${agent.category})`;
+  const waMessage = `Hola Cristian, me interesa el ${agent.name}. ¿Cómo arrancamos?`;
 
   return (
     <section
@@ -52,25 +47,11 @@ export function AgentCta({ agent }: AgentCtaProps) {
               de viabilidad técnica y un plan de despliegue por fases — entres o no con nosotros.
             </p>
 
-            <div className="mt-2 flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-              <Button asChild size="lg" className="w-full sm:w-auto">
-                <a href={whatsappUrl(waMessage)} target="_blank" rel="noopener noreferrer">
-                  <WhatsAppIcon className="h-4 w-4" />
-                  Escribir por WhatsApp
-                  <ArrowRight />
-                </a>
-              </Button>
-            </div>
-
-            <div className="mt-6 flex w-full max-w-xl items-center gap-3">
-              <span aria-hidden className="h-px flex-1 bg-border" />
-              <span className="text-xs font-mono uppercase tracking-[0.18em] text-subtle">
-                o déjanos tu contacto
-              </span>
-              <span aria-hidden className="h-px flex-1 bg-border" />
-            </div>
-
-            <LeadForm source={source} className="w-full max-w-xl text-left" />
+            <WhatsAppPanel
+              message={waMessage}
+              note={`Te contesto yo directamente. Escríbeme por el ${agent.name} y arrancamos con una llamada de 30 minutos.`}
+              className="mt-2 w-full max-w-md text-left"
+            />
           </div>
         </Reveal>
       </Container>

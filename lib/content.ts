@@ -28,6 +28,10 @@ export function whatsappUrl(message: string): string {
   return `https://wa.me/${site.contact.whatsappRaw}?text=${encodeURIComponent(message)}`;
 }
 
+/** Mensaje del botón flotante: el mismo en todo el sitio. */
+export const whatsappFabMessage =
+  "Hola Cristian, vengo de tu portafolio y quiero conversar sobre un proyecto.";
+
 export const nav = {
   links: [
     { href: "#pilares", label: "Expertise" },

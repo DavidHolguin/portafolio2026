@@ -1,12 +1,9 @@
-import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/motion/reveal";
 import { EmberGlow } from "@/components/primitives/ember-glow";
 import { GrainOverlay } from "@/components/primitives/grain-overlay";
-import { LeadForm } from "@/components/primitives/lead-form";
-import { WhatsAppIcon } from "@/components/primitives/whatsapp-icon";
-import { Button } from "@/components/ui/button";
-import { ctaFinal, whatsappUrl } from "@/lib/content";
+import { WhatsAppPanel } from "@/components/primitives/whatsapp-panel";
+import { ctaFinal } from "@/lib/content";
 
 export function CtaFinal() {
   return (
@@ -43,36 +40,10 @@ export function CtaFinal() {
               {ctaFinal.description}
             </p>
 
-            <div className="mt-2 flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-              <Button asChild size="lg" className="w-full sm:w-auto">
-                <a href={whatsappUrl(ctaFinal.waMessage)} target="_blank" rel="noopener noreferrer">
-                  <WhatsAppIcon className="h-4 w-4" />
-                  Escribir por WhatsApp
-                  <ArrowRight />
-                </a>
-              </Button>
-            </div>
-
-            <div className="mt-6 flex w-full max-w-xl items-center gap-3">
-              <span aria-hidden className="h-px flex-1 bg-foreground/35" />
-              <span className="font-mono text-xs uppercase tracking-[0.18em] text-foreground/85">
-                o déjame tu contacto
-              </span>
-              <span aria-hidden className="h-px flex-1 bg-foreground/35" />
-            </div>
-
-            <div className="relative mt-4 w-full max-w-xl">
-              {/* La luz que levanta el bloque del formulario: sobre negro puro se veía apagado */}
-              <div
-                aria-hidden
-                className="pointer-events-none absolute -inset-x-16 -inset-y-10 -z-10 rounded-[40px]"
-                style={{
-                  background:
-                    "radial-gradient(ellipse at center, rgba(26,115,232,0.16), rgba(26,115,232,0.04) 45%, transparent 72%)",
-                }}
-              />
-              <LeadForm source="Cristian Holguin · Portafolio" className="w-full text-left" />
-            </div>
+            <WhatsAppPanel
+              message={ctaFinal.waMessage}
+              className="mt-2 w-full max-w-md text-left"
+            />
           </div>
         </Reveal>
       </Container>

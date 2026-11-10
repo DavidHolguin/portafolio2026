@@ -1,7 +1,8 @@
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { site } from "@/lib/content";
+import { WhatsAppFab } from "@/components/primitives/whatsapp-fab";
+import { site, whatsappFabMessage } from "@/lib/content";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -86,6 +87,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     >
       <body className="min-h-screen bg-background text-foreground font-sans antialiased">
         {children}
+        <WhatsAppFab message={whatsappFabMessage} />
         <Analytics />
       </body>
     </html>
