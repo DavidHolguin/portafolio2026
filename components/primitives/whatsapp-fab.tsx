@@ -14,26 +14,36 @@ interface WhatsAppFabProps {
  * Botón flotante de WhatsApp.
  *
  * Aparece al pasar el hero (no compite con el CTA de la portada) y se esconde
- * cuando el bloque de contacto ya está en pantalla: ahí el mismo botón vive
- * dentro de la tarjeta y no tiene sentido duplicarlo encima.
+ * cuando el bloque de contacto o el pie están en pantalla: ahí el mismo botón
+ * vive dentro de la tarjeta y no tiene sentido duplicarlo encima.
  * Respeta el área segura del teléfono y se mantiene al alcance del pulgar.
  */
 export function WhatsAppFab({ message }: WhatsAppFabProps) {
   const [pasoElHero, setPasoElHero] = useState(false);
-  const [enContacto, setEnContacto] = useState(false);
+  const [enZonaDeContacto, setEnZonaDeContacto] = useState(false);
 
   useEffect(() => {
     const alHacerScroll = () => setPasoElHero(window.scrollY > 360);
     alHacerScroll();
     window.addEventListener("scroll", alHacerScroll, { passive: true });
 
-    const contacto = document.getElementById("contacto");
-    const observador = contacto
-      ? new IntersectionObserver(([entrada]) => setEnContacto(entrada.isIntersecting), {
-          rootMargin: "0px 0px -25% 0px",
-        })
+    // El bloque de contacto y el pie ya ofrecen WhatsApp: el flotante sobra ahí.
+    const destinos = Array.from(document.querySelectorAll("#contacto, footer"));
+    const enPantalla = new Set<Element>();
+    const observador = destinos.length
+      ? new IntersectionObserver(
+          (entradas) => {
+            for (const entrada of entradas) {
+              if (entrada.isIntersecting) enPantalla.add(entrada.target);
+              else enPantalla.delete(entrada.target);
+            }
+            setEnZonaDeContacto(enPantalla.size > 0);
+          },
+          { rootMargin: "0px 0px -20% 0px" },
+        )
       : null;
-    observador?.observe(contacto as Element);
+
+    for (const destino of destinos) observador?.observe(destino);
 
     return () => {
       window.removeEventListener("scroll", alHacerScroll);
@@ -41,7 +51,7 @@ export function WhatsAppFab({ message }: WhatsAppFabProps) {
     };
   }, []);
 
-  const visible = pasoElHero && !enContacto;
+  const visible = pasoElHero && !enZonaDeContacto;
 
   return (
     <a
